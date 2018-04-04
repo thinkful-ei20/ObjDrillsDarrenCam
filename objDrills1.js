@@ -37,3 +37,16 @@ function personMaker() {
   return person;
 }
 
+let objTest = {
+  foo: 'foo',
+  bar: 'bar',
+};
+
+function keyDeleter(obj){
+  delete obj.foo;
+  delete obj.bar;
+
+  return obj;
+}
+
+console.log(keyDeleter(objTest));
