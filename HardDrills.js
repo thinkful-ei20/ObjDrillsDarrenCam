@@ -8,5 +8,17 @@ const loaf = {
   },
 };
 
-console.log(loaf.hydration());
+// console.log(loaf.hydration());
 
+// Iterate over an objects properties
+const obj = {
+  foo: 1,
+  bar: 'two',
+  fum: true,
+  quux: 'four',
+  spam: 5,
+};
+
+for (let key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+}
