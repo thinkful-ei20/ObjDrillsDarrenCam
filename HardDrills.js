@@ -19,6 +19,10 @@ const obj = {
   spam: 5,
 };
 
-for (let key in obj) {
-  console.log(`${key}: ${obj[key]}`);
-}
+// for (let key in obj) {
+//   console.log(`${key}: ${obj[key]}`);
+// }
+
+let meals = ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'];
+
+console.log(meals[3]);
