@@ -50,3 +50,4 @@ function keyDeleter(obj){
 }
 
 console.log(keyDeleter(objTest));
+
