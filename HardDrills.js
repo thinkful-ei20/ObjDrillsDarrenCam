@@ -78,26 +78,14 @@ const decode = str => {
   let words = str.split(' ');
   let decodedWord = '';
 
-  // Log cipher key:value pairs
-  // for (let key in cipher) {
-  //   console.log(`${key}: ${cipher[key]}`);
-  // }
-
-  //Log first letter of each words[i]
   for(let i = 0; i < words.length; i++) {
-    // console.log(words[i][0]);
-    // if cipher hasOwnProperty of the first letter of words[i]
-
-    // First loop through, the hasOwnProperty should be 'c'
-    // Which should += the [3] index of the words[i] to decodedWord
     if (cipher.hasOwnProperty(words[i][0])) {
-      decodedWord += words[i]
-    }
+      decodedWord += words[i][cipher[words[i][0]]-1];
+    } else {
+      decodedWord += ' ';
+    }    
   }
   return decodedWord;
 };
 
-console.log(decode(input));
-
-// const decodedWords = str => decode(str);
-// console.log(decodedWords(input));
+// console.log(decode(input));
