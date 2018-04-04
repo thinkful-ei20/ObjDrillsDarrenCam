@@ -37,21 +37,31 @@ const objArr = [
   {
     name: 'Darren',
     jobTitle: 'Developer',
+    boss: 'Cam',
   },
   {
     name: 'Frank',
     jobTitle: 'Programmer',
+    boss: 'Cam',
   },
   {
     name: 'Martha',
     jobTitle: 'FrontEnd Dev',
+    boss: 'Cam',
   },
   {
     name: 'Bob',
     jobTitle: 'Developer',
+    boss: 'Cam',
   }
 ];
 
 for (let person of objArr) {
-  console.log(`${person.name}: ${person.jobTitle}`);
+  if (person.hasOwnProperty('boss')){
+    console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`);
+  } else {
+    console.log(`${person.jobTitle} ${person.name} reports to NOONE!`);
+  }
+  
 }
+
