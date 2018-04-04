@@ -66,3 +66,33 @@ const testData = [
 
 // console.log(makeStudentsReport(testData));
 
+const students = [
+  {
+    name: 'Tim',
+    status: 'Current student',
+    course: 'Biology'
+  },
+  {
+    name: 'Sue',
+    status: 'Withdrawn',
+    course: 'Mathematics'
+  }
+];
+
+function enrollInSummerSchool(students) {
+  // for(let i = 0l i < students.length; i++) {
+  //   if(students[i].status !== 'In Summer School') {
+  //     students[i].status = 'In Summer School'
+  //   }
+  // }
+  // return students;
+  return students.map(students => {
+    return {
+      name: students.name,
+      status: 'In Summer School',
+      course: students.course,
+    };
+  });
+}
+
+console.log(enrollInSummerSchool(students));
