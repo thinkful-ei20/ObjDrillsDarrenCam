@@ -107,4 +107,45 @@ function findById(items, idNum) {
   return items.find(elem => elem.id === idNum);
 }
 
-console.log(findById(scratchData,19 ));
+// console.log(findById(scratchData,19 ));
+
+const objectA = {
+  id: 2,
+  name: 'Jane Doe',
+  age: 34,
+  city: 'Chicago',
+};
+
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria',
+};
+
+const expectedKeys = ['id', 'name', 'age', 'city'];
+
+/*
+validateKeys should return true if object has all of the keys from expectedKeys, and no additional keys. 
+It should return false if one or more of the expectedKeys is missing from the object, or if the object contains extra keys not in expectedKeys.
+*/
+
+function validateKeys(object, expectedKeys) {
+  // if the enumerable properties of object is not the same as expectedKeys, return false
+  if (Object.keys(object).length !== expectedKeys.length) {
+    return false;
+  }
+
+  // Loop through expectedKeys
+  for(let i = 0; i < expectedKeys.length; i++) {
+    // While loop through expectedkeys.length
+    // if Object.keys(object) DOES NOT find, the key matching expectedKey[i], return false
+    // Goes through the array of strings, that is the keys of the object parameter, and if the key is found, it returns true
+    if(!Object.keys(object).find(key => key === expectedKeys[i])) {
+      return false;
+    }
+  }
+  // otherwise return true
+  return true;
+}
+
+console.log(validateKeys(objectB, expectedKeys));
