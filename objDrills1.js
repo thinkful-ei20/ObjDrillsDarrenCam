@@ -50,7 +50,7 @@ function keyDeleter(obj){
 }
 
 
-console.log(keyDeleter(objTest));
+// console.log(keyDeleter(objTest));
 
 // console.log(keyDeleter(objTest));
 
@@ -95,4 +95,16 @@ function enrollInSummerSchool(students) {
   });
 }
 
-console.log(enrollInSummerSchool(students));
+// console.log(enrollInSummerSchool(students));
+
+const scratchData = [
+  { id: 22, foo: 'bar' },
+  { id: 28, foo: 'bizz' },
+  { id: 19, foo: 'bazz' },
+];
+
+function findById(items, idNum) {
+  return items.find(elem => elem.id === idNum);
+}
+
+console.log(findById(scratchData,19 ));
