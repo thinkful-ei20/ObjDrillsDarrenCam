@@ -26,3 +26,32 @@ const obj = {
 let meals = ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'];
 
 console.log(meals[3]);
+
+
+// Properties that aren't there
+const objArr = [
+  {
+    name: 'Cam',
+    jobTitle: 'Coder',
+  },
+  {
+    name: 'Darren',
+    jobTitle: 'Developer',
+  },
+  {
+    name: 'Frank',
+    jobTitle: 'Programmer',
+  },
+  {
+    name: 'Martha',
+    jobTitle: 'FrontEnd Dev',
+  },
+  {
+    name: 'Bob',
+    jobTitle: 'Developer',
+  }
+];
+
+for (let person of objArr) {
+  console.log(`${person.name}: ${person.jobTitle}`);
+}
