@@ -32,4 +32,4 @@ console.log(findOne(HEROES, { id: 1 })); // { id: 1, name: 'Captain America', sq
 console.log(findOne(HEROES, { id: 10 })); // null
 console.log(findOne(HEROES, { id: 2, name: 'Aquaman' })); // null
 console.log(findOne(HEROES, { id: 5, squad: 'Justice League' })); //  { id: 5, name: 'Wonder Woman', squad: 'Justice League' }
-// fineOne(HEROES, { squad: 'Justice League' }); // { id: 4, name: 'Superman', squad: 'Justice League' }
+console.log(findOne(HEROES, { squad: 'Justice League' })); // { id: 4, name: 'Superman', squad: 'Justice League' }
